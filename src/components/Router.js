@@ -3,18 +3,24 @@ import { Routes,Route,BrowserRouter,useParams } from 'react-router-dom';
 import MenuDepartamentos from './MenuDepartamentos';
 import HomeDepartamentos from './HomeDepartamentos';
 import CreateDepartamento from './CreateDepartamento';
+import DetalleDepartamento from './DetalleDepartamento';
 
 
 export default class Router extends Component {
+  
   render() {
+    function DetalleDepartamentoElement() {
+      var {iddepartamento} = useParams();
+      return <DetalleDepartamento iddepartamento={iddepartamento}/>;
+    }
     return (
       <BrowserRouter>
-      <h1>hgjhg</h1>
-      {/* <MenuDepartamentos/>
+       <MenuDepartamentos/>
       <Routes>
           <Route path='/' element={<HomeDepartamentos/>}/>
           <Route path='/create' element={<CreateDepartamento/>}/>
-      </Routes> */}
+          <Route path='/detalle/:iddepartamento' element={<DetalleDepartamentoElement/>}/>
+      </Routes> 
       </BrowserRouter>
     )
   }

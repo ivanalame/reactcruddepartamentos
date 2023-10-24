@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 export default class MenuDepartamentos extends Component {
   render() {
@@ -23,18 +24,12 @@ export default class MenuDepartamentos extends Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href="#">
+                <NavLink className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
-                <a className="nav-link" href="#">
-                  Features
-                </a>
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
-                <a className="nav-link disabled" aria-disabled="true">
-                  Disabled
-                </a>
+                </NavLink>
+                <NavLink className="nav-link" to="/create">
+                  Añadir nuevo Departamento
+                </NavLink>
               </div>
             </div>
           </div>
