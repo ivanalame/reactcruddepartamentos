@@ -53,6 +53,8 @@ return (
                        <td>{departamento.localidad}</td>
                        <td><NavLink  to={"/detalle/"+ departamento.numero} >Detalle departamento</NavLink></td>
                        <td><NavLink  to={"/detalle/"+ departamento.numero + "/" + departamento.nombre + "/" + departamento.localidad} >Detalle departamento VERSION  2</NavLink></td>
+                       <td><NavLink to={"/modificar/" + departamento.numero}>Modificar departamento</NavLink></td>
+                      <td><NavLink to={"/delete/" + departamento.numero}>Eliminar departamento</NavLink></td>
                     </tr>                  
                   )
                 })
